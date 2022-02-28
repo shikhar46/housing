@@ -117,7 +117,7 @@ forecaster <- function(bjp_to_sp, bsp_to_sp){
            Party,
            Vote_Share_Percentage,
            swing) %>%
-    mutate(projected_voteshare = Vote_Share_Percentage + swing,) %>%
+    mutate(projected_voteshare = Vote_Share_Percentage + swing) %>%
     group_by(Constituency_Name) %>%
     arrange(desc(projected_voteshare), .by_group = TRUE) %>%
     mutate(position = row_number()) %>%
