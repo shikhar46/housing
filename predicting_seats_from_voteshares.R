@@ -53,7 +53,7 @@ dat <- read_csv("uttar_pradesh.csv") %>%
 # Calculate the total votes polled by each alliance in a region
 votes_2017 <- dat %>%
   group_by(Sub_Region, alliances) %>%
-  summarise(party.total = sum(Votes),) %>%
+  summarise(party.total = sum(Votes)) %>%
   ungroup()
 
 # Calculate the total votes polled in every region
